@@ -1,0 +1,10 @@
+
+RENAME TABLE admins TO users;
+
+ALTER TABLE users
+ADD COLUMN role ENUM('admin', 'user')
+NOT NULL DEFAULT 'user';
+
+UPDATE users
+SET role = 'admin'
+WHERE username = 'admin';
