@@ -1,0 +1,13 @@
+CREATE TABLE artikel (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(200) NOT NULL,
+    kategori VARCHAR(100) NOT NULL,
+    isi TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO artikel (judul, kategori, isi) VALUES
+('Pengenalan Teknologi Informasi', 'Teknologi',
+ 'Artikel ini membahas pengenalan teknologi informasi.'),
+('Manfaat Sistem Informasi', 'Sistem Informasi',
+ 'Artikel ini membahas manfaat sistem informasi dalam organisasi.');
